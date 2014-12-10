@@ -1,0 +1,17 @@
+<#for(var i=0, l=data.list.length; i<l; i++){var item=data.list[i]; #>
+	<dl class="list-item line">
+		<dt><i class="i-face<#=item.face#>"></i></dt>
+		<dd>
+			<span class="grid-r f-aid"><#=item.createTime#></span>
+			<span class="f-skyblue"><#=item.userName#></span>
+			对{%$expertInfo.realName%}医生的评价：
+			<span class="f-orange"><#=item.starStr#></span>
+		</dd>
+		<dd class="more"><span style="display: none"><#=(item.content||'')#></span></dd>
+	</dl>
+<#}#>
+<#if(data.total > data.pn+data.rn){#>
+<div class="next-page">
+	<a href="#">更多评价</a>
+</div>
+<#}#>
