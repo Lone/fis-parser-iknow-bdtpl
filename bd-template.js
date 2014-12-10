@@ -94,7 +94,7 @@ bt.MODULE_PATH = '';
 //将字符串拼接生成函数，即编译过程(compile)
 bt._compile = function(str){
     var funBody = "var _template_fun_array=[];\nvar fn=(function(data){\nvar _template_varName='';\nfor(name in data){\n_template_varName+=('var '+name+'=data[\"'+name+'\"];');\n};\neval(_template_varName);\n_template_fun_array.push('"+bt._analysisStr(str)+"');\n_template_varName=null;\n})(_template_object);\nfn = null;\nreturn _template_fun_array.join('');\n";
-    var moduleDefine = "var baiduTemplate=reuire('" + bt.MODULE_PATH + "');";
+    var moduleDefine = "var baiduTemplate=require('" + bt.MODULE_PATH + "');";
     return new Function("_template_object",moduleDefine+funBody);
 };
 

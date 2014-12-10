@@ -1,6 +1,6 @@
 {
   "name": "fis-parser-iknow-bdtpl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "baidu template for fis 2",
   "main": "index.js",
   "scripts": {
